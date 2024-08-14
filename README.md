@@ -58,7 +58,7 @@ Esta lista de exercícios em Python foi desenvolvida para proporcionar aos aluno
    ```
 9. Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit.
     ```python
-   Celsius: float = float(input('digite sua temperatura em celsius: '))             
+    Celsius: float = float(input('digite sua temperatura em celsius: '))             
     Farenheit = ((Celsius*9/5)+32)
     print('sua temperatura em farenheit é: ',Farenheit,'°F')
    ```
