@@ -26,7 +26,6 @@ Esta lista de exercícios em Python foi desenvolvida para proporcionar aos aluno
    media: float = (nota1+nota2+nota3+nota4)/4
    print('sua média é: ', media)
    ```
-   
 4. Faça um Programa que converta metros para centímetros.
    ```python
    metro: float = float(input('digite o valor em metro: ')) 
@@ -228,6 +227,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
     else:
         print('aprovado!')
     ```
+    
 26. Faça um Programa que leia três números e mostre o maior deles.
     ```python
     n1: int = int(input('digite o primeiro numero: '))
@@ -240,6 +240,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
     else:
         print(n3)
     ```
+    
 27. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
     ```python
     produto1: float = float(input('digite o valor do 1° produto: '))
@@ -252,6 +253,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
     else:
         print('compre o 3° produto, pois ele é o mais barato entre os demais!')
     ```
+    
 28. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
     ```python
     turno: str = str(input('em qual turno você estuda?,digite M para matutino ou V para Vespertino ou N para Noturno: '))
@@ -266,6 +268,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
             else:
                 print('valor inválido!')
      ```
+    
 29. As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um       colaborador e o reajuste segundo o seguinte critério, baseado no salário atual: 
 salários até R$ 280,00 (incluindo): aumento de 20% 
 salários entre R$ 280,00 e R$ 700,00: aumento de 15% 
@@ -275,39 +278,39 @@ o salário antes do reajuste;
 o percentual de aumento aplicado; 
 o valor do aumento; 
 o novo salário, após o aumento.
-   ```python
-   salario: float = float(input('digite seu salario: ')) 
-   porcentagem1: str = '20%'
-   porcentagem2: str = '15%'
-   porcentagem3: str = '10%' 
-   porcentagem4: str = '5%' 
+    ```python
+    salario: float = float(input('digite seu salario: ')) 
+    porcentagem1: str = '20%'
+    porcentagem2: str = '15%'
+    porcentagem3: str = '10%' 
+    porcentagem4: str = '5%' 
 
 
-   if salario <= 280:
-       print(f'o salário antes do reajuste:  {salario}')
-       print(f'o percentual de aumento aplicado é: {porcentagem1}')
-       print(f'o valor do aumento: {(salario*1.20) - salario:.2f}')
-       print(f'o novo salário, após o aumento é de: {salario*1.20:.2f}')
+    if salario <= 280:
+        print(f'o salário antes do reajuste:  {salario}')
+        print(f'o percentual de aumento aplicado é: {porcentagem1}')
+        print(f'o valor do aumento: {(salario*1.20) - salario:.2f}')
+        print(f'o novo salário, após o aumento é de: {salario*1.20:.2f}')
 
 
-   elif salario > 280 and salario < 700 :
-       print(f'o salário antes do reajuste:{salario}')
-       print(f'o percentual de aumento aplicado é:{porcentagem2}')
-       print(f'o valor do aumento: {(salario*1.15) - salario:.2f}')
-       print(f'o novo salário, após o aumento é de: {salario*1.15:.2f}')
+    elif salario > 280 and salario < 700 :
+        print(f'o salário antes do reajuste:{salario}')
+        print(f'o percentual de aumento aplicado é:{porcentagem2}')
+        print(f'o valor do aumento: {(salario*1.15) - salario:.2f}')
+        print(f'o novo salário, após o aumento é de: {salario*1.15:.2f}')
 
-   elif salario > 700 and salario < 1500 :
-       print(f'o salário antes do reajuste: {salario}')
-       print(f'o percentual de aumento aplicado é: {porcentagem3}')
-       print(f'o valor do aumento: {(salario*1.10) - salario:.2f}')
-       print(f'o novo salário, após o aumento é de: {salario*1.10:.2f}')
+    elif salario > 700 and salario < 1500 :
+        print(f'o salário antes do reajuste: {salario}')
+        print(f'o percentual de aumento aplicado é: {porcentagem3}')
+        print(f'o valor do aumento: {(salario*1.10) - salario:.2f}')
+        print(f'o novo salário, após o aumento é de: {salario*1.10:.2f}')
 
-   else:
-       print(f'o salário antes do reajuste: {salario}')
-       print(f'o percentual de aumento aplicado é: {porcentagem4}')
-       print(f'o valor do aumento: {(salario*1.05) - salario:.2f}')
-       print(f'o novo salário, após o aumento é de: {salario*1.05:.2f}')               
-   ```
+    else:
+        print(f'o salário antes do reajuste: {salario}')
+        print(f'o percentual de aumento aplicado é: {porcentagem4}')
+        print(f'o valor do aumento: {(salario*1.05) - salario:.2f}')
+        print(f'o novo salário, após o aumento é de: {salario*1.05:.2f}')               
+    ```
 
 30. Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. 
 Desconto do IR: 
@@ -315,54 +318,78 @@ Salário Bruto até 900 (inclusive) - isento
 Salário Bruto até 1500 (inclusive) - desconto de 5% 
 Salário Bruto até 2500 (inclusive) - desconto de 10% 
 Salário Bruto acima de 2500 - desconto de 20%
-   ```python
-   valor_hora: float = float(input('digite o valor da sua hora: '))
-   horas: float = float(input('digite a quantidade de horas trabalhadas no mês: '))
-   salario_bruto: float = (valor_hora* horas)
-   inss: float = (salario_bruto * (10/100))
-   fgts: float = (salario_bruto * (11/100))
-   imposto_de_renda1: float = (salario_bruto * 0)
-   imposto_de_renda2: float = (salario_bruto * (5/100))
-   imposto_de_renda3: float = (salario_bruto * (10/100))
-   imposto_de_renda4: float = (salario_bruto * (20/100))
+    ```python
+    valor_hora: float = float(input('digite o valor da sua hora: '))
+    horas: float = float(input('digite a quantidade de horas trabalhadas no mês: '))
+    salario_bruto: float = (valor_hora* horas)
+    inss: float = (salario_bruto * (10/100))
+    fgts: float = (salario_bruto * (11/100))
+    imposto_de_renda1: float = (salario_bruto * 0)
+    imposto_de_renda2: float = (salario_bruto * (5/100))
+    imposto_de_renda3: float = (salario_bruto * (10/100))
+    imposto_de_renda4: float = (salario_bruto * (20/100))
 
 
 
-   if salario_bruto <= 900:
-       print(f'SALÁRIO BRUTO: {salario_bruto}')
-       print(f'(-) IMPOSTO DE RENDA (0%): R$ {imposto_de_renda1}')
-       print(f'(-) INSS (10%): R$ {inss} ')
-       print(f'FGTS (11%): R$ {fgts} ')
-       print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda1+inss}')
-       print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda1+inss)}')
-   else:
-        if salario_bruto > 900 and salario_bruto <=1500:
-           print(f'SALÁRIO BRUTO: {salario_bruto}')
-           print(f'(-) IMPOSTO DE RENDA (5%): R$ {imposto_de_renda2}')
-           print(f'(-) INSS (10%): R$ {inss} ')
-           print(f'FGTS (11%): R$ {fgts} ')
-           print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda2+inss}')  
-           print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda2+inss)}')
-        else:
-            if salario_bruto > 1500 and salario_bruto <=2500:
+    if salario_bruto <= 900:
+        print(f'SALÁRIO BRUTO: {salario_bruto}')
+        print(f'(-) IMPOSTO DE RENDA (0%): R$ {imposto_de_renda1}')
+        print(f'(-) INSS (10%): R$ {inss} ')
+        print(f'FGTS (11%): R$ {fgts} ')
+        print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda1+inss}')
+        print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda1+inss)}')
+    else:
+         if salario_bruto > 900 and salario_bruto <=1500:
+            print(f'SALÁRIO BRUTO: {salario_bruto}')
+            print(f'(-) IMPOSTO DE RENDA (5%): R$ {imposto_de_renda2}')
+            print(f'(-) INSS (10%): R$ {inss} ')
+            print(f'FGTS (11%): R$ {fgts} ')
+            print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda2+inss}')  
+            print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda2+inss)}')
+         else:
+             if salario_bruto > 1500 and salario_bruto <=2500:
+                 print(f'SALÁRIO BRUTO: {salario_bruto}')
+                 print(f'(-) IMPOSTO DE RENDA (10%): R$ {imposto_de_renda3}')
+                 print(f'(-) INSS (10%): R$ {inss} ')
+                 print(f'FGTS (11%): R$ {fgts} ')
+                 print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda3+inss}')  
+                 print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda3+inss)}')
+             else:
                 print(f'SALÁRIO BRUTO: {salario_bruto}')
-                print(f'(-) IMPOSTO DE RENDA (10%): R$ {imposto_de_renda3}')
+                print(f'(-) IMPOSTO DE RENDA (20%): R$ {imposto_de_renda4}')
                 print(f'(-) INSS (10%): R$ {inss} ')
                 print(f'FGTS (11%): R$ {fgts} ')
-                print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda3+inss}')  
-                print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda3+inss)}')
-            else:
-               print(f'SALÁRIO BRUTO: {salario_bruto}')
-               print(f'(-) IMPOSTO DE RENDA (20%): R$ {imposto_de_renda4}')
-               print(f'(-) INSS (10%): R$ {inss} ')
-               print(f'FGTS (11%): R$ {fgts} ')
-               print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda4+inss}')  
-               print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda4+inss)}')
-   ```
-
-
-
-
+                print(f'TOTAL DE DESCONTOS: R$ {imposto_de_renda4+inss}')  
+                print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda4+inss)}')
+     ```
+    
+31.  Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+     ```python
+     numero: float = float(input('digite um numero: '))
+     if numero == 1:
+           print('o dia da semana correspondente a esse número é: DOMINGO!')
+     else:
+          if numero == 2:
+              print('o dia da semana correspente a esse número é: SEGUNDA!')
+          else:
+              if numero == 3:
+                  print('o dia da semana correspente a esse número é: TERÇA!')
+              else:
+                  if numero == 4:
+                      print('o dia da semana correspente a esse número é: QUARTA!')
+                  else:
+                      if numero == 5:
+                          print('o dia da semana correspente a esse número é: QUINTA!')
+                      else:
+                          if numero == 6:
+                              print('o dia da semana correspente a esse número é: SEXTA!')
+                          else:
+                              if numero == 7:
+                                  print('o dia da semana correspente a esse número é: SÁBADO!')
+                              else:
+                                  print('valor inválido!')
+     ```
+32. 
     
 
 
