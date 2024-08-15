@@ -5,63 +5,181 @@ Esta lista de exercícios em Python foi desenvolvida para proporcionar aos aluno
 ```python```
 1. Faça um Programa que peça um número e então mostre a mensagem: O número informado foi [número].
    ```python
-    numero: float = float(input('digite um número: '))              
-    print('o número informado foi: ', numero)
+   numero: float = float(input('digite um número: '))              
+   print('o número informado foi: ', numero)
    ```
+   
 2. Faça um Programa que peça dois números e imprima a soma.
    ```python
-    numero1: float =float(input('digite o primeiro numero: '))     
-    numero2: float =float(input('digite o segundo numero: '))
-    soma = numero1 + numero2
-    print('a soma dos numeros é: ', soma)
+   numero1: float =float(input('digite o primeiro numero: '))     
+   numero2: float =float(input('digite o segundo numero: '))
+   soma: float = numero1 + numero2
+   print('a soma dos numeros é: ', soma)
    ```
+   
 3. Faça um Programa que peça as 4 notas bimestrais e mostre a média.
    ```python
-    nota1: float = float(input('digite sua primeira nota: '))       
-    nota2: float = float(input('digite sua segunda nota: '))
-    nota3: float = float(input('digite sua terceira nota: '))
-    nota4: float= float(input('digite sua quarta nota: '))
-    media=(nota1+nota2+nota3+nota4)/4
-    print('sua média é: ', media)
+   nota1: float = float(input('digite sua primeira nota: '))       
+   nota2: float = float(input('digite sua segunda nota: '))
+   nota3: float = float(input('digite sua terceira nota: '))
+   nota4: float= float(input('digite sua quarta nota: '))
+   media: float = (nota1+nota2+nota3+nota4)/4
+   print('sua média é: ', media)
    ```
+   
 4. Faça um Programa que converta metros para centímetros.
    ```python
-    metro: float = float(input('digite o valor em metro: ')) 
-    centimetro = metro*100
-    print('seu valor em centimetros é:', centimetro)
+   metro: float = float(input('digite o valor em metro: ')) 
+   centimetro: float = metro*100
+   print('seu valor em centimetros é:', centimetro)
    ```
+   
 5. Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
    ```python
-    raio: float = float(input('digite o valor do raio: ')) 
-    area =  (raio**2)*3.14        
-    print('a area da circunferencia é:', area)
+   raio: float = float(input('digite o valor do raio: ')) 
+   area: float = (raio**2)*3.14        
+   print('a area da circunferencia é:', area)
    ```
+   
 6. Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
-    ```python
-    lado: float = float(input('digite o valor do lado do quadrado: '))
-    area = lado**2       
-    print('a area desse quadrado é: ',area)
-    print('o dobro da area desse quadrado é: ',(area)*2)
-    ```
+   ```python
+   lado: float = float(input('digite o valor do lado do quadrado: '))
+   area: float = lado**2       
+   print('a area desse quadrado é: ',area)
+   print('o dobro da area desse quadrado é: ',(area)*2)
+   ```
+   
 7. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
    ```python
-    valor: float = float(input('digite o quanto voce ganha por hora: '))            
-    horas = float(input('digite a quantidade de horas trabalhadas: '))
-    salario = valor*horas
-    print("seu salario é:", salario)
+   valor: float = float(input('digite o quanto voce ganha por hora: '))            
+   horas = float(input('digite a quantidade de horas trabalhadas: '))
+   salario: float = valor*horas
+   print("seu salario é:", salario)
    ```
+   
 8. Faça um Programa que peça a temperatura em graus Farenheit, transforme e mostre a temperatura em graus Celsius.
    ```python
-    Farenheit: float = float(input('digite a temperatura em farenheit:'))          
-    celsius = ((Farenheit-32)*5)/9
-    print('sua temperatura em celsius é: ',celsius,'°C')
+   farenheit: float = float(input('digite a temperatura em farenheit:'))          
+   celsius: float = ((farenheit-32)*5)/9
+   print('sua temperatura em celsius é: ',celsius,'°C')
    ```
+   
 9. Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Farenheit.
     ```python
-    Celsius: float = float(input('digite sua temperatura em celsius: '))             
-    Farenheit = ((Celsius*9/5)+32)
-    print('sua temperatura em farenheit é: ',Farenheit,'°F')
-   ```
+    celsius: float = float(input('digite sua temperatura em celsius: '))             
+    farenheit: float = ((celsius*9/5)+32)
+    print('sua temperatura em farenheit é: ',farenheit,'°F')
+    ```
+    
+10. Elaborar um algoritmo que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). O algoritmo deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário.
+    ```python
+    print('descubra seu novo valor em real')                   
+    dolar: float = float(input('digite o valor em dolar: '))
+    cotacao: float = float(input('digite a cotacao do dolar: '))
+    real: float = (dolar*cotacao)
+    print('seu valor em real é:',real)
+    ```
+
+11. Faça um algoritmo que receba um valor que foi depositado e exiba o valor com rendimento após um mês. Considere fixo o juro da poupança em 0,70% a. m.
+    ```python
+    preco_produto:float =float(input('digite o precço de custo do produto: '))               
+    acrescimo: float = float(input('digite em % o valor de acréscimo do produto: '))
+    valor_de_venda: float =(preco_produto*(acrescimo/100)+ preco_produto)
+    print('o valor final do produto sera de: ', valor_de_venda)
+    ```
+12. A Loja Mamão com Açúcar está vendendo seus produtos em 5 (cinco) prestações sem juros. Faça um algoritmo que receba um valor de uma compra e mostre o valor das prestações.
+    ```python
+    valor: float = float(input('digite o valor da compra: '))                
+    prestacoes= valor/5
+    print('os valores das 5 prestaçoes ficou de: ',prestacoes)
+    ```
+
+13. Faça um algoritmo que receba o preço de custo de um produto e mostre o valor de venda. Sabe-se que o preço de custo receberá um acréscimo de acordo com um percentual informado pelo usuário.
+    ```python
+    preco_produto:float =float(input('digite o precço de custo do produto: '))               
+    acrescimo: float = float(input('digite em % o valor de acréscimo do produto: '))
+    valor_de_venda: float =(preco_produto*(acrescimo/100)+ preco_produto)
+    print('o valor final do produto sera de: ', valor_de_venda)
+    ```
+
+14. Escrever um algoritmo para determinar o consumo médio de um automóvel sendo fornecida a distância total percorrida pelo automóvel e o total de combustível gasto.
+    ```python
+    distancia: float =float(input('digite a distancia total percorrida pelo o automovel em Km: '))               
+    combustivel: float =float(input('digite o total de combustivel gasto pelo o automovel em L: '))
+    consumo_medio=(distancia/combustivel)
+    print('o consumo medio desse automovel é: ', comsumo_medio,'km/L')
+    ```
+    
+15. Escreva um programa que leia três números inteiros e positivos (a, b, c) e calcule a seguinte expressão: 
+d = (r+s)/2, onde  r =(a+b)**2 e s = (b+c)**2
+    ```python
+    a: float = float(input('digite um valor para a: '))             
+    b: float = float(input('digite um valor para b: '))
+    c: float = float(input('digite um valor para c: '))
+
+    r: float = (a+b)**2
+    s: float = (b+c)**2
+    d: float = (r+s)/2
+
+    print('o resultado da expressao d=(r+s)/2, sendo r=(a+b)**2 e s=(b+c)**2 é: ',d)
+    ```
+16. Escrever um algoritmo que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês.
+     ```python
+     vendedor: str = str(input('digite o nome do vendedor: '))                 
+     salario_fixo: float = float(input('digite o salario fixo do vendedor: '))
+     vendas:float = float(input('digite o total de vendas em dinheiro: '))
+     salario_total = ((salario_fixo )+(vendas*0.15))
+     print('nome do vendedor: ',vendedor)
+     print('salario fixo: ',salario_fixo)
+     print('salario total: ',salario_total)
+     ```
+
+   
+
+17. Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre: 
+o produto do dobro do primeiro com metade do segundo . 
+a soma do triplo do primeiro com o terceiro.     
+o terceiro elevado ao cubo.
+    ```python
+    numero1: int = int(input('digite um número inteiro: '))               
+    numero2: int = int(input('digite mais um número inteiro: '))
+    numero_real: float = float(input('digite agora um numero real: '))
+
+    resp1: float = ((2*numero1)*(numero2/2))
+    resp2: float= ((3*numero1)+numero_real)
+    resp3: float = (numero_real**3)
+
+
+    print('o primero resultado é: ',resp1)
+    print('o segundo resultado é: ',resp2)
+    print('o terceiro resultado é: ',resp3)
+    ```
+    
+18. Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula: (72.7*altura) – 58.
+    ```python
+    altura: float = float(input('digite sua altura em m: '))          
+    peso_ideal: float =((72.7*altura)-58)
+    print('seu peso ideal é: ',peso_ideal)
+    ```
+19. Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em MBps), calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+    ```python
+    tamanho_arquivo: float =float(input('digite o tamanho do arquivo em Mb: '))             
+    velocidade: float = float(input('digite a velocidade de um link na internet em Mb/s: '))
+    tempo: float = ((tamanho_arquivo/velocidade)/60)
+    print('o tempo gasto é de: ',tempo,'Min')
+    ```
+20. Ler dois valores para as variáveis A e B, e efetuar as trocas dos valores de forma que a variável A passe a possuir o valor da variável B e a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
+    ```python
+    a: float = float(input('digite um valor para A:'))             
+    b: float = float(input('digite um valor para B: '))
+
+    a,b = (b,a)
+
+    print('a:',a)
+    print('b:',b )
+    ```
+21.
+
 
 22. Faça um Programa que peça dois números e imprima o maior deles. 
     ```python
