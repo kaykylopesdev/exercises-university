@@ -196,7 +196,7 @@ o terceiro elevado ao cubo.
     numero=int(input('digite um numero: '))
     if numero > 0:
         print('positivo')
-    elif numero == 0:
+    if numero == 0:
         print('neutro')
     else:
         print('negativo')
@@ -207,7 +207,7 @@ o terceiro elevado ao cubo.
     letra: str = input("digite F ou M : ")
     if letra == 'F':
         print("Feminino")
-    elif letra == 'M':
+    if letra == 'M':
         print("Masculino")
     else:
         print("Sexo inválido")
@@ -235,7 +235,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
     n3: int = int(input('digite o terceiro numero: '))
     if n1 > n2 and n1 > n3 :
         print(n1)
-    elif n2 > n1 and n2 > n3 :
+    if n2 > n1 and n2 > n3 :
         print(n2)
     else:
         print(n3)
