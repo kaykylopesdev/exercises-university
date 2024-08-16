@@ -433,7 +433,55 @@ O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e
             
     ```
 
-33. 
-    
+33. Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. 
+Dicas: Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro; Triângulo Equilátero: três lados iguais; Triângulo isósceles: quaisquer dois lados iguais; Triângulo Escaleno: três lados diferentes;
+    ```python
+    lado1: float = float(input('digite o valor do primeiro lado do triangulo: '))
+    lado2: float = float(input('digite o valor do segundo lado do triangulo: '))
+    lado3: float = float(input('digite o valor do terceiro lado do triangulo: '))
+    if lado1 > lado2 + lado3 or lado2 > lado1 + lado3 or lado3 > lado1 + lado2:
+        print('esses valores nao podem formar um triangulo')
+    else:
+        if lado1 == lado2 and lado2 == lado3:
+            print('seu triangulo é equilátero!')
+        else:
+            if lado1 == lado2 or lado1 == lado3 or lado3 == lado2:
+                print('seu triangulo é isósceles!')
+            else:
+                if lado1 != lado2 and lado1!= lado3 and  lado2 != lado3:
+                    print('seu triangulo é escaleno!')
+    ```
+
+34. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: 
+Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado; 
+Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuáro e encerre o programa; 
+Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário; 
+Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+    ```python
+    a = float(input('dgite o valor do coeficiente a: '))
+    if a == 0:
+       print('isso não é uma equaçao do 2° grau')
+    else:
+       b = float(input('digite o valor do coeficiente b: '))
+       c = float(input('digite o valor do coeficiente c: '))
+       delta =(b**2)-(4*a*c)
+       if delta < 0 :
+           print('equaçao nao possui raizes reais!')
+       else:
+           if  delta == 0 :
+               print('a equaçao possui apenas uma reaiz real!')
+               x1 = -b/(2*a)
+               print(f'a raiz é: {x1}')
+           else:
+               print('a equaçao possui duas raizes reais!')
+               x1 = float((-(b)-(delta)**(1/2))/(2*a))
+               x2 = float((-(b)+(delta)**(1/2))/(2*a))
+               print('as raizes da equaçao são: ')
+               print(f'x1: {x1}')
+               print(f'x2: {x2}')
+
+     ```
+
+35.
 
 
