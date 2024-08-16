@@ -389,7 +389,51 @@ Salário Bruto acima de 2500 - desconto de 20%
                               else:
                                   print('valor inválido!')
      ```
-32. 
+32. Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: 
+Média de Aproveitamento  Conceito
+Entre 9.0 e 10.0       A
+Entre 7.5 e 9.0         B
+Entre 6.0 e 7.5         C
+Entre 4.0 e 6.0         D
+Entre 4.0 e zero       E
+O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E.
+    ```python
+    nota1: float = float(input('digite sua primeira nota:'))
+    nota2: float = float(input('digite sua segunda nota:'))
+    media: float = float(( nota1+nota2)/2)
+    if media >= 9 and media <= 10:
+        print('A')
+        print(f'suas notas são: {nota1,nota2}')
+        print(f'sua media é: {media}')
+        print('APROVADO')
+    else:
+        if media >= 7.5 and media < 9:
+            print('B')
+            print(f'suas notas são: {nota1,nota2}')
+            print(f'sua media é: {media}')
+            print('APROVADO')
+        else:
+            if media >= 6 and media < 7.5:
+                print('C')
+                print(f'suas notas são: {nota1,nota2}')
+                print(f'sua media é: {media}')
+                print('APROVADO')
+            else:
+                if media >= 4 and media < 6:
+                    print('D')
+                    print(f'suas notas são: {nota1,nota2}')
+                    print(f'sua media é: {media}')
+                    print('REPROVADO')
+                else:
+                    if media >= 0 and media < 4:
+                        print('E')
+                        print(f'suas notas são: {nota1,nota2}')
+                        print(f'sua media é: {media}')
+                        print('REPROVADO')
+            
+    ```
+
+33. 
     
 
 
