@@ -177,10 +177,41 @@ o terceiro elevado ao cubo.
     print('a:',a)
     print('b:',b )
     ```
-21.
+21. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê: 
+salário bruto. 
+quanto pagou ao INSS. 
+quanto pagou ao sindicato. 
+o salário líquido. 
+calcule os descontos e o salário líquido, conforme a tabela abaixo:
+Salário Bruto : R$
+IR (11%) : R$
+INSS (8%) : R$
+Sindicato ( 5%) : R$
+Salário Liquido : R$
+Obs.: Salário Bruto - Descontos = Salário Líquido.
+    ```python
+    valor: float = float(input('digite quanto você ganha por hora: '))
+    hora: float = float(input('digite a quantidade de horas trbalhadas no mês: '))
+    salario_bruto = (valor * hora)
+    inss = (salario_bruto * 0.08) 
+    sindicato = (salario_bruto * 0.05)
+    imposto_de_renda = (salario_bruto * 0.11)
+    salario_liquido = ( salario_bruto - inss - sindicato - imposto_de_renda)
+
+    print(f'o salario bruto é: {salario_bruto}')
+    print(f'o valor pago ao INSS foi: {inss}')
+    print(f'o valor pago ao sindicato foi: {sindicato}')
+    print(f'o salario liquido é: {salario_liquido}')
+    print(f'''os descontos e o salario liquido são: 
+    IR(11%): R$ {imposto_de_renda}
+    INSS(8%): R$ {inss}
+    Sindicato(5%): R$ {sindicato}
+    Salario liquido: R$ {salario_liquido}''')
+    
+    ```
 
 
-22. Faça um Programa que peça dois números e imprima o maior deles. 
+23. Faça um Programa que peça dois números e imprima o maior deles. 
     ```python
     n1 = int(input('digite um numero: '))
     n2 = int(input('digite outro numero: '))
@@ -190,7 +221,7 @@ o terceiro elevado ao cubo.
         print(n2)
     ```
 
-23. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+24. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
     ```python
     numero=int(input('digite um numero: '))
     if numero > 0:
@@ -201,7 +232,7 @@ o terceiro elevado ao cubo.
         print('negativo')
     ```
 
-24. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+25. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
     ```python
     letra: str = input("digite F ou M : ")
     if letra == 'F':
@@ -212,7 +243,7 @@ o terceiro elevado ao cubo.
         print("Sexo inválido")
     ```
 
-25. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
+26. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
 A mensagem "Aprovado", se a média alcançada for maior ou igual a sete; 
 A mensagem "Reprovado", se a média for menor do que sete; 
 A mensagem "Aprovado com Distinção", se a média for igual a dez.
@@ -228,7 +259,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
         print('aprovado!')
     ```
     
-26. Faça um Programa que leia três números e mostre o maior deles.
+27. Faça um Programa que leia três números e mostre o maior deles.
     ```python
     n1: int = int(input('digite o primeiro numero: '))
     n2: int = int(input('digite o segundo numero: '))
@@ -241,7 +272,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
         print(n3)
     ```
     
-27. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+28. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
     ```python
     produto1: float = float(input('digite o valor do 1° produto: '))
     produto2: float = float(input('digite o valor do 2° produto: '))
@@ -254,7 +285,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
         print('compre o 3° produto, pois ele é o mais barato entre os demais!')
     ```
     
-28. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+29. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
     ```python
     turno: str = str(input('em qual turno você estuda?,digite M para matutino ou V para Vespertino ou N para Noturno: '))
     if turno == "M" :
@@ -269,7 +300,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
                 print('valor inválido!')
      ```
     
-29. As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um       colaborador e o reajuste segundo o seguinte critério, baseado no salário atual: 
+30. As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um       colaborador e o reajuste segundo o seguinte critério, baseado no salário atual: 
 salários até R$ 280,00 (incluindo): aumento de 20% 
 salários entre R$ 280,00 e R$ 700,00: aumento de 15% 
 salários entre R$ 700,00 e R$ 1500,00: aumento de 10% 
@@ -312,7 +343,7 @@ o novo salário, após o aumento.
         print(f'o novo salário, após o aumento é de: {salario*1.05:.2f}')               
     ```
 
-30. Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. 
+31. Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. 
 Desconto do IR: 
 Salário Bruto até 900 (inclusive) - isento 
 Salário Bruto até 1500 (inclusive) - desconto de 5% 
@@ -363,7 +394,7 @@ Salário Bruto acima de 2500 - desconto de 20%
                 print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda4+inss)}')
      ```
     
-31.  Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+32.  Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
      ```python
      numero: float = float(input('digite um numero: '))
      if numero == 1:
@@ -389,7 +420,7 @@ Salário Bruto acima de 2500 - desconto de 20%
                               else:
                                   print('valor inválido!')
      ```
-32. Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: 
+33. Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: 
 Média de Aproveitamento  Conceito
 Entre 9.0 e 10.0       A
 Entre 7.5 e 9.0         B
@@ -433,7 +464,7 @@ O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e
             
     ```
 
-33. Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. 
+34. Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. 
 Dicas: Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro; Triângulo Equilátero: três lados iguais; Triângulo isósceles: quaisquer dois lados iguais; Triângulo Escaleno: três lados diferentes;
     ```python
     lado1: float = float(input('digite o valor do primeiro lado do triangulo: '))
@@ -452,7 +483,7 @@ Dicas: Três lados formam um triângulo quando a soma de quaisquer dois lados fo
                     print('seu triangulo é escaleno!')
     ```
 
-34. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: 
+35. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: 
 Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado; 
 Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuáro e encerre o programa; 
 Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário; 
@@ -485,7 +516,28 @@ Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuá
 Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1; 
 Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1. 
 
-```python
+    ```python
 
-```
+    ```
+
+37. Faça um Programa que peça um número inteiro e determine se ele é par ou impar.
+    ```python
+    numero: int = int(input('digite um número: '))
+    if numero % 2 == 0:
+       print('seu número é par')
+    else:
+       print('seu número é impar')
+    ```
+
+38. Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é: 
+par ou ímpar; 
+positivo ou negativo; 
+inteiro ou decimal.
+    ```python
+    
+    ```
+
+
+
+
 
