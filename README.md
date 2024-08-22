@@ -211,7 +211,7 @@ Obs.: Salário Bruto - Descontos = Salário Líquido.
     ```
 
 
-23. Faça um Programa que peça dois números e imprima o maior deles. 
+22. Faça um Programa que peça dois números e imprima o maior deles. 
     ```python
     n1 = int(input('digite um numero: '))
     n2 = int(input('digite outro numero: '))
@@ -221,7 +221,7 @@ Obs.: Salário Bruto - Descontos = Salário Líquido.
         print(n2)
     ```
 
-24. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+23. Faça um Programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
     ```python
     numero=int(input('digite um numero: '))
     if numero > 0:
@@ -232,7 +232,7 @@ Obs.: Salário Bruto - Descontos = Salário Líquido.
         print('negativo')
     ```
 
-25. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
+24. Faça um Programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever: F - Feminino, M - Masculino, Sexo Inválido.
     ```python
     letra: str = input("digite F ou M : ")
     if letra == 'F':
@@ -243,7 +243,7 @@ Obs.: Salário Bruto - Descontos = Salário Líquido.
         print("Sexo inválido")
     ```
 
-26. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
+25. Faça um programa para a leitura de duas notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
 A mensagem "Aprovado", se a média alcançada for maior ou igual a sete; 
 A mensagem "Reprovado", se a média for menor do que sete; 
 A mensagem "Aprovado com Distinção", se a média for igual a dez.
@@ -259,7 +259,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
         print('aprovado!')
     ```
     
-27. Faça um Programa que leia três números e mostre o maior deles.
+26. Faça um Programa que leia três números e mostre o maior deles.
     ```python
     n1: int = int(input('digite o primeiro numero: '))
     n2: int = int(input('digite o segundo numero: '))
@@ -272,7 +272,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
         print(n3)
     ```
     
-28. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
+27. Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato.
     ```python
     produto1: float = float(input('digite o valor do 1° produto: '))
     produto2: float = float(input('digite o valor do 2° produto: '))
@@ -285,7 +285,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
         print('compre o 3° produto, pois ele é o mais barato entre os demais!')
     ```
     
-29. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+28. Faça um Programa que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
     ```python
     turno: str = str(input('em qual turno você estuda?,digite M para matutino ou V para Vespertino ou N para Noturno: '))
     if turno == "M" :
@@ -300,7 +300,7 @@ A mensagem "Aprovado com Distinção", se a média for igual a dez.
                 print('valor inválido!')
      ```
     
-30. As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um       colaborador e o reajuste segundo o seguinte critério, baseado no salário atual: 
+29. As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um       colaborador e o reajuste segundo o seguinte critério, baseado no salário atual: 
 salários até R$ 280,00 (incluindo): aumento de 20% 
 salários entre R$ 280,00 e R$ 700,00: aumento de 15% 
 salários entre R$ 700,00 e R$ 1500,00: aumento de 10% 
@@ -343,7 +343,7 @@ o novo salário, após o aumento.
         print(f'o novo salário, após o aumento é de: {salario*1.05:.2f}')               
     ```
 
-31. Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. 
+30. Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês. 
 Desconto do IR: 
 Salário Bruto até 900 (inclusive) - isento 
 Salário Bruto até 1500 (inclusive) - desconto de 5% 
@@ -394,7 +394,7 @@ Salário Bruto acima de 2500 - desconto de 20%
                 print(f'SALÁRIO LIQUIDO: R$ {salario_bruto-(imposto_de_renda4+inss)}')
      ```
     
-32.  Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
+31.  Faça um Programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.
      ```python
      numero: float = float(input('digite um numero: '))
      if numero == 1:
@@ -420,7 +420,7 @@ Salário Bruto acima de 2500 - desconto de 20%
                               else:
                                   print('valor inválido!')
      ```
-33. Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: 
+32. Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: 
 Média de Aproveitamento  Conceito
 Entre 9.0 e 10.0       A
 Entre 7.5 e 9.0         B
@@ -464,7 +464,7 @@ O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e
             
     ```
 
-34. Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. 
+33. Faça um Programa que peça os 3 lados de um triângulo. O programa deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. 
 Dicas: Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro; Triângulo Equilátero: três lados iguais; Triângulo isósceles: quaisquer dois lados iguais; Triângulo Escaleno: três lados diferentes;
     ```python
     lado1: float = float(input('digite o valor do primeiro lado do triangulo: '))
@@ -483,11 +483,9 @@ Dicas: Três lados formam um triângulo quando a soma de quaisquer dois lados fo
                     print('seu triangulo é escaleno!')
     ```
 
-35. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: 
+34. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: 
 Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado; 
 Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuáro e encerre o programa; 
-Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário; 
-Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
     ```python
     a = float(input('dgite o valor do coeficiente a: '))
     if a == 0:
@@ -499,22 +497,45 @@ Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuá
        if delta < 0 :
            print('equaçao nao possui raizes reais!')
        else:
-           if  delta == 0 :
-               print('a equaçao possui apenas uma reaiz real!')
-               x1 = -b/(2*a)
-               print(f'a raiz é: {x1}')
-           else:
-               print('a equaçao possui duas raizes reais!')
-               x1 = float((-(b)-(delta)**(1/2))/(2*a))
-               x2 = float((-(b)+(delta)**(1/2))/(2*a))
-               print('as raizes da equaçao são: ')
-               print(f'x1: {x1}')
-               print(f'x2: {x2}')
-
+           print(f'o delta da equação é: {delta}')
      ```
+
+35. Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário; 
+Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;
+    ```python
+    a = float(input('dgite o valor do coeficiente a: '))
+       if a == 0:
+          print('isso não é uma equaçao do 2° grau')
+       else:
+          b = float(input('digite o valor do coeficiente b: '))
+          c = float(input('digite o valor do coeficiente c: '))
+          delta =(b**2)-(4*a*c)
+          if delta < 0 :
+              print('equaçao nao possui raizes reais!')
+          else:
+              if  delta == 0 :
+                  print('a equaçao possui apenas uma reaiz real!')
+                  x1 = -b/(2*a)
+                  print(f'a raiz é: {x1}')
+              else:
+                  print('a equaçao possui duas raizes reais!')
+                  x1 = float((-(b)-(delta)**(1/2))/(2*a))
+                  x2 = float((-(b)+(delta)**(1/2))/(2*a))
+                  print('as raizes da equaçao são: ')
+                  print(f'x1: {x1}')
+                  print(f'x2: {x2}')
+    ```
+    
 36. Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
     ```python
-   
+    if ano % 4 != 0:
+       print('esse ano não é bissexto')
+    else:
+       if ano % 100 == 0 and ano % 400 != 0:
+          print('esse ano não pode ser bissexto')
+       else:
+            print(f' o ano : {ano} é bissexto')
+
     ```
     
 37. Faça um Programa para leitura de três notas parciais de um aluno. O programa deve calcular a média alcançada por aluno e apresentar: 
@@ -522,17 +543,28 @@ A mensagem "Aprovado", se a média for maior ou igual a 7, com a respectiva méd
 A mensagem "Reprovado", se a média for menor do que 7, com a respectiva média alcançada; 
 A mensagem "Aprovado com Distinção", se a média for igual a 10.
     ```python
-   
+    nota1: float = float(input('digite sua primeita nota: '))
+    nota2: float = float(input('digite sua segunda nota: '))
+    nota3: float = float(input('digite sua terceira nota: '))
+    media = (nota1+nota2+nota3)/3
+    print(f'sua média é: {media :.2f} ')
+    if media < 7:
+        print('reprovado!')
+    else:
+        if media == 10:
+            print('aprovado com Distinção!')
+        else:
+            print('aprovado!')
     ```
 
-38. Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina. 
+39. Faça um Programa para um caixa eletrônico. O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. O programa não deve se preocupar com a quantidade de notas existentes na máquina. 
 Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1; 
 Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1. 
     ```python
 
     ```
     
-39. Faça um Programa que peça um número inteiro e determine se ele é par ou impar.
+40. Faça um Programa que peça um número inteiro e determine se ele é par ou impar.
     ```python
     numero: int = int(input('digite um número: '))
     if numero % 2 == 0:
@@ -541,14 +573,102 @@ Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 
        print('seu número é impar')
     ```
     
-40. Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é: 
+41. Faça um Programa que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é: 
 par ou ímpar; 
 positivo ou negativo; 
 inteiro ou decimal.
     ```python
-    
+    numero1: float = float(input('digite seu primero numero: '))
+
+    numero2: float = float(input('digite seu segundo numero: '))
+
+    operacao: float = float(input('''digite a sua operaçao:
+        ADIÇÃO: 1
+        SUBTRAÇÃO: 2
+        MULTIPLICAÇÃO: 3
+        DIVISÃO: 4 \n'''))
+
+    soma = numero1 + numero2
+    subtracao = numero1 - numero2
+    multiplicacao = numero1 * numero2
+    if operacao == 1:
+        print(f'o numero é:{soma}')
+        if soma % 2 == 0:
+            print('par')
+        else:
+            print('impar')
+        if soma > 0:
+            print('positivo')
+        else:
+            if soma == 0:
+                print('nulo')
+            else:
+                print('negativo')
+        if soma != int(soma):
+            print('decimal')
+        else:
+            print('inteiro')
+
+    if operacao == 2:
+        print(f'o numero é: {subtracao}')
+        if subtracao % 2 == 0:
+            print('par')
+        else:
+            print('impar')
+        if subtracao > 0:
+            print('positivo')
+        else:
+            if subtracao == 0:
+                print('nulo')
+            else:
+                print('negativo')
+        if subtracao != int(subtracao):
+            print('decimal')
+        else:
+            print('inteiro')
+
+    if operacao == 3:
+        print(f'o numero é: {multiplicacao}')
+        if multiplicacao % 2 == 0:
+            print('par')
+        else:
+            print('impar')
+        if multiplicacao > 0:
+            print('positivo')
+        else:
+            if multiplicacao == 0:
+                print('nulo')
+            else:
+                print('negativo')
+        if multiplicacao != int(multiplicacao):
+            print('decimal')
+        else:
+            print('inteiro')
+
+    if operacao == 4:
+        if numero2 == 0:
+            print('operacao invalida, pois  o denominador nao pode ser igual a 0')
+        else:
+            divisao = numero1 / numero2
+            print(f'o numero é: {divisao}')
+            if divisao % 2 == 0:
+                print('par')
+            else:
+                print('impar')
+            if divisao > 0:
+                print('positivo')
+            else:
+                 if divisao == 0:
+                    print('nulo')
+                 else:
+                     print('negativo')
+            if divisao != int(divisao):
+                print('decimal')
+            else:
+                print('inteiro')
     ```
-41. Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são: 
+    
+42. Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são: 
 "Telefonou para a vítima?" 
 "Esteve no local do crime?" 
 "Mora perto da vítima?" 
@@ -558,7 +678,7 @@ inteiro ou decimal.
     
     ```
 
-42. Um posto está vendendo combustíveis com a seguinte tabela de descontos: 
+43. Um posto está vendendo combustíveis com a seguinte tabela de descontos: 
 Álcool: 
 até 20 litros, desconto de 3% por litro 
 acima de 20 litros, desconto de 5% por litro 
@@ -581,6 +701,16 @@ Escreva um programa que leia o número de litros vendidos, o tipo de combustíve
         else :
            print(f'o valor pago da gasolina será de: {gasolina*2.50*0.95}')
     ```
+    
+44. Uma fruteira está vendendo frutas com a seguinte tabela de preços: 
+Até 5 Kg           Acima de 5 Kg 
+Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
+Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
+Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
+   ```python
+
+
+   ```
 
 
 
