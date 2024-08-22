@@ -1,5 +1,5 @@
 # exercises-university
-Esta lista de exercícios em Python foi desenvolvida para proporcionar aos alunos uma prática estruturada e abrangente dos conceitos de programação. Os exercícios cobrem uma ampla gama de tópicos, desde fundamentos básicos até técnicas avançadas, com o objetivo de fortalecer a compreensão e a aplicação prática da linguagem Python.
+This list of exercises in Python has been developed to provide students with structured and comprehensive practice of programming concepts. The exercises cover a wide range of topics, from basic fundamentals to advanced techniques, with the goal of strengthening understanding and practical application of the Python.
 
 ####
 ```python```
