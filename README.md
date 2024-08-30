@@ -707,10 +707,37 @@ Escreva um programa que leia o número de litros vendidos, o tipo de combustíve
 Morango         R$ 2,50 por Kg          R$ 2,20 por Kg
 Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg
 Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
-   ```python
+    ```python
+    kg_morango: float = float(input('digite quantos kg de morango você comprou: '))
+    kg_maca: float = float(input('digite quantos kg de maçã você comprou: '))
+    preco_morango = 2.50
+    preco_maca = 1.80
+    preco_morango_desconto = 2.20
+    preco_maca_desconto =  1.50
+    if kg_morango + kg_maca > 5:
+        valor_morango = kg_morango * preco_morango_desconto
+        valor_maca = kg_maca * preco_maca_desconto
+    else:
+        valor_morango = kg_morango * preco_morango
+        valor_maca = kg_maca * preco_maca
 
+    valor_total = valor_maca + valor_morango
 
-   ```
+    if (kg_morango + kg_maca ) > 8 or valor_total > 25:
+        valor_total *= 0.90
+        print('você ganhou um desconto de 10%')
+
+    print(f' o valor a ser pago pelo os morangos é: R$ {valor_morango:.2f}')
+    print(f' o valor a ser pago pela as maças é: R$ {valor_maca:.2f}')
+    print(f' o valor total a ser pago é: R$ {valor_total:.2f}')
+
+    ```
+
+45. Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes categorias:  infantil A = 5 - 7 anos; infantil B = 8-10 anos; juvenil A = 11-13 anos; juvenil B = 14-17 anos; adulto = maiores de 18 anos.
+    ```python
+
+    
+    ```
 
 
 
