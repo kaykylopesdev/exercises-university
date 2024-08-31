@@ -756,6 +756,28 @@ Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapass
     
     ```
 
+45. Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas: para homens: (72.7*h) – 58 e para mulheres: (62.1*h) - 44.7 (h = altura)
+    ```python
+    sexo:str = str(input('digite o seu sexo (masculino ou feminino): '))
+
+    if sexo != 'feminino' and sexo != 'masculino':
+      print('sexo inválido!')
+    else:
+
+        altura:float = float(input('digite a sua altura em Metros: '))
+
+        if sexo == 'masculino':
+          peso_ideal = (72.7*altura) - 58
+          print(f'o seu peso ideal é: {peso_ideal:.2f} kg ')
+        else:
+          if sexo == 'feminino':
+            peso_ideal = (62.1 *altura)- 44.7
+            print(f'o seu peso ideal é: {peso_ideal:.2f} kg ')
+  
+
+     ```
+    
+
 
 
 
