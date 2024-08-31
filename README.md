@@ -735,7 +735,24 @@ Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapass
 
 45. Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes categorias:  infantil A = 5 - 7 anos; infantil B = 8-10 anos; juvenil A = 11-13 anos; juvenil B = 14-17 anos; adulto = maiores de 18 anos.
     ```python
-
+    idade: int = int(input('digite a idade do nadador: '))
+    if idade < 5:
+      print ('idade não permitida')
+    else:
+      if idade >= 5 and idade <= 7:
+        print('a categoria do nadador será : Infantil A')
+      else:
+        if idade >= 8 and idade <= 10:
+          print('a categoria do nadador será : Infantil B')
+        else:
+          if idade >= 11 and idade <= 13:
+            print('a categoria do nadador será : Juvenil A')
+          else:
+            if idade >= 14 and idade <= 17:
+              print('a categoria do nadador será : Juvenil B')
+            else:
+              if idade >= 18:
+                print('a categoria do nadador será : Adulto')
     
     ```
 
