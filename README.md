@@ -780,6 +780,32 @@ Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapass
   
 
      ```
+
+46. Escreva um programa que calcula a média de 30 alunos e informa a situação (reprovado, aprovado ou recuperação).
+    ```python
+    for i in range(1,31):
+      nota1: float = float(input('digite a 1° nota do aluno: '))
+      nota2: float = float(input('digite a 2° nota do aluno: '))
+      media = (nota1 + nota2) / 2
+      if nota1 < 0 or nota2 < 0 or nota1 > 10 or nota2 > 10:
+        print('notas inválidas!') 
+      else:
+        if media >= 7:
+           print(f'a média do aluno foi: {media:.2f} e a situação desse aluno é : aprovado')
+        else:
+          if media >= 4.5 and media < 7:
+            print(f'a média do aluno foi: {media:.2f} e a situação desse aluno é : recuperação')
+          else:
+            if media < 4.5:
+              print(f'a média do aluno foi: {media:.2f} e a situação desse aluno é : reprovado')
+
+    ```
+
+47. Escreva um programa que leia 10 números e informe o maior e o menor número.
+    ```python
+    
+
+    ```
     
 
 
