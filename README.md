@@ -470,17 +470,21 @@ Dicas: Três lados formam um triângulo quando a soma de quaisquer dois lados fo
     lado1: float = float(input('digite o valor do primeiro lado do triangulo: '))
     lado2: float = float(input('digite o valor do segundo lado do triangulo: '))
     lado3: float = float(input('digite o valor do terceiro lado do triangulo: '))
-    if lado1 > lado2 + lado3 or lado2 > lado1 + lado3 or lado3 > lado1 + lado2:
-        print('esses valores nao podem formar um triangulo')
+
+    if lado1 == 0 or lado2 == 0 or lado3 == 0:
+      print('valores inválidos!')
     else:
-        if lado1 == lado2 and lado2 == lado3:
-            print('seu triangulo é equilátero!')
+        if lado1 > lado2 + lado3 or lado2 > lado1 + lado3 or lado3 > lado1 + lado2:
+             print('esses valores nao podem formar um triangulo')
         else:
-            if lado1 == lado2 or lado1 == lado3 or lado3 == lado2:
-                print('seu triangulo é isósceles!')
+            if lado1 == lado2 and lado2 == lado3:
+                print('seu triangulo é equilátero!')
             else:
-                if lado1 != lado2 and lado1!= lado3 and  lado2 != lado3:
-                    print('seu triangulo é escaleno!')
+                if lado1 == lado2 or lado1 == lado3 or lado3 == lado2:
+                    print('seu triangulo é isósceles!')
+                else:
+                    if lado1 != lado2 and lado1!= lado3 and  lado2 != lado3:
+                        print('seu triangulo é escaleno!')
     ```
 
 34. Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações: 
