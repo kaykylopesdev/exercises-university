@@ -803,11 +803,74 @@ Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapass
 
 47. Escreva um programa que leia 10 números e informe o maior e o menor número.
     ```python
-    
+    num: int = int(input('digite o 1° número: '))
+    numMaior = numMenor = num
+
+    for i in range (2,11):
+      num: int = int(input(f'digite o {i}° número: '))
+
+      if numMaior > num:
+        numMaior = num 
+      else:
+          if numMenor < num:
+            numMenor = num
+
+    print(f'o maior numero é: {numMaior}')
+    print(f'o menor numero é: {numMenor}')
+
 
     ```
     
+48. Escreva um programa que calcula o fatorial de um dado número N.
+    ```python
+
+    num: int = int(input('digite o número o qual você quer calcular o fatorial: '))
+    fatorial = 1
+
+    if num < 0:
+      print('valor inválido, pois não existe fatorial negativo!') 
+    else:
+      for i in range (num ,0, -1 ):
+        fatorial *= i
+      print(f'{num}! = {fatorial}')
+
+    ```
+
+49. Faça um programa para somar os números pares positivos < 1000 e ao final escrever o resultado.
+    ```python
+    soma = 0
+
+    for i in range (2,1000,2):
+       soma += i
+    print(f'a soma dos pares positivos menores que 1000 é : {soma}')
+
+    ```
+
+ 50. Faça um programa para calcular a área de N quadriláteros. Fórmula: Área = Lado * Lado.
+     ```python
+     quad:int  = int(input('digite a quantidade de quadrilateros que você quer calcular a area: '))
+
+     for i in range(quad):
+        lado1: float = float(input('digite o valor do  1° lado do quadrilátero: '))
+        lado2: float = float(input('digite o valor do  2° lado do quadrilátero: '))
+        area = (lado1 * lado2)
+        print(f'a area do quadrilátero é: {area:.2f} ')
 
 
+     ```
 
+51. Faça um programa para calcular um valor A elevado a um expoente B. Os valores A e B deverão ser lidos. Não usar A** B e sim uma estrutura de repetição.
+    ```python
+    A: float = float(input('digite o valor da Base: '))
+    B: int = int(input('digite o valor do expoente: '))
+    potencia = 1
+    for i in range(B):
+      potencia *= A 
+    print(potencia)
 
+    ```
+
+52. Sendo H = 1 + 1/2 + 1/3 + 1/4 + ... + 1/N. Faça um programa para gerar e mostrar o número H. O número N será fornecido como entrada.
+    ```python
+
+    ```
