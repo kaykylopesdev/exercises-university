@@ -1029,27 +1029,24 @@ c)	A porcentagem de pessoas que responderam bom entre todos os espectadores anal
     ```
 
  59. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo: 
+    Tabuada de 5:
+    5 X 1 = 5
+    5 X 2 = 10
+    ...
+    5 X 10 = 50
 
-
-Tabuada de 5:
-5 X 1 = 5
-5 X 2 = 10
-...
-5 X 10 = 50
-
-   ```python
-     x = int(input('digite o numero o qual voce deseja ver a tabuada: '))
-     while x < 0:
-         print('valor inválido, por favor digite outro valor para X')
+     ```python
+      x = int(input('digite o numero o qual voce deseja ver a tabuada: '))
+      while x < 0:
+          print('valor inválido, por favor digite outro valor para X')
  
-         x = int(input('digite o numero o qual voce deseja ver a tabuada: '))
+          x = int(input('digite o numero o qual voce deseja ver a tabuada: '))
  
-     for y in range (1,11):
-         tabuada = y * x
-         print( x, "x", y, "=", tabuada)
-
+      for y in range (1,11):
+          tabuada = y * x
+          print( x, "x", y, "=", tabuada)
  
- ```
+     ```
 
 60. Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.
     ```python
@@ -1102,7 +1099,191 @@ Tabuada de 5:
     ```
 
 62. A série de FETUCCINE é gerada da seguinte forma: os dois primeiros termos são fornecidos pelo usuário; a partir daí, os termos são gerados com a soma ou subtração dos dois termos anteriores, ou seja:
+    ```python
+
+    ```
+
+63. Escreva um programa que imprima os N termos de uma Progressão Aritmética, conforme fórmula a seguir. O usuário deverá fornecer o valor de: n (número de termos), r (razão) e a1 (primeiro termo da série).
+    ```python
+    
+    a1: int = int(input("Digite o valor de a1 (primeiro termo): "))
+    r: int  = int(input("Digite o valor de r (razão): "))
+    termos: int = int(input("Digite o número de termos: "))
+
+    if termos <= 0:
+        print("O número de termos deve ser maior que zero.")
+    else:
+        for i in range(termos):
+            an = a1 + i * r
+            print(an)
+
+
+    ```
+
+64. O Departamento Estadual de Meteorologia lhe contratou para desenvolver um programa que leia um conjunto indeterminado de temperaturas, e informe ao final a menor e a maior temperatura informada, bem como a média das temperaturas.
+    ```python
+    
+    temperatura: int = int(input('Informe uma temperatura: '))
+    maior = menor = temperatura
+    soma = 0
+    soma += temperatura
+    contador = 1
+
+    condicional = input('Deseja continuar? S - Sim / N - Não  ').strip().upper()
+
+    while condicional == 'S':
+        temperatura = int(input('Digite uma temperatura: '))
+        soma += temperatura
+        contador += 1
+
+        if temperatura > maior:
+            maior = temperatura
+        if temperatura < menor:
+            menor = temperatura
+
+        condicional = input('Deseja continuar? S - Sim / N - Não  ').strip().upper()
+
+    if contador > 0:
+        media = soma / contador
+        print(f'A MAIOR temperatura digitada foi: {maior}')
+        print(f'A MENOR temperatura digitada foi: {menor}')
+        print(f'A MÉDIA das temperaturas informadas foi: {media:.2f}')
+    else:
+        print('Nenhuma temperatura foi informada.')
+
+   
+    ```
+
+65. Faça um programa que receba o valor de uma dívida e mostre uma tabela com os seguintes dados: valor da dívida, valor dos juros, quantidade de parcelas e valor da parcela. 
+Os juros e a quantidade de parcelas seguem a tabela abaixo: 
+Quantidade de Parcelas  % de Juros sobre o valor inicial da dívida
+    1      			 0
+	3   		    	10
+	6       			15
+	
+   Exemplo de saída do programa: 
+   Valor da Dívida     Valor dos Juros           Quantidade de Parcelas                 Valor da Parcela
+   R$ 1.000,00              0                         1                                 R$  1.000,00
+   R$ 1.100,00             100                        3                                 R$    366,00
+   R$ 1.150,00             150                        6                                 R$    191,67
+
+   ```python
+
+   divida: float = float(input('Informe o valor da dívida: '))
+
+   parcela3 = 10 / 100
+   parcela6 = 15 / 100
+
+   juros3 = divida * parcela3
+   juros6 = divida * parcela6
+
+   valParcela3 = (divida + juros3) / 3
+   valParcela6 = (divida + juros6) / 6
+
+   if divida <= 0:
+       print('valor inválido')
+   else:
+       print('\nValor da Dívida   Valor dos Juros   Quantidade de Parcelas   Valor da Parcela')
+       print(f'{divida:>15.2f}           0.00                 1       {divida:>20.2f}')
+       print(f'{divida + juros3:>15.2f} {juros3:>15.2f}                3       {valParcela3:>20.2f}')
+       print(f'{divida + juros6:>15.2f} {juros6:>15.2f}                6       {valParcela6:>20.2f}')
+   
 
     
+
+
+   ```
+
+
+66. Uma grande firma deseja saber qual é o empregado mais recente e qual é o mais antigo. Desenvolver um programa para ler um número indeterminado de informações contendo o número do empregado e o número de meses de trabalho deste empregado e imprimir o mais recente e o mais antigo. Obs.: A última informação contém os dois números iguais a zero. Não existem dois empregados admitidos no mesmo mês
+    ```python
+    
+
+    anosTrabalhadorVelho = -1
+    anosTrabalhadorNovo = float('inf')
+    numeroDoEmpregadoNovo = numeroDoEmpregadoVelho = None
+
+    condicional = "S"
+
+    while condicional == "S":
+        numeroDoEmpregado = int(input('Informe o numero de registro do empregado: '))
+        anosDeTrabalho = int(input('Informe há quanto tempo este trabalhador está na empresa: '))
+
+        if anosDeTrabalho > anosTrabalhadorVelho:
+            anosTrabalhadorVelho = anosDeTrabalho
+            numeroDoEmpregadoVelho = numeroDoEmpregado
+
+        if anosDeTrabalho < anosTrabalhadorNovo:
+            anosTrabalhadorNovo = anosDeTrabalho
+            numeroDoEmpregadoNovo = numeroDoEmpregado
+
+        condicional = input('Deseja continuar? S - Sim / N - Não: ').strip().upper()
+
+    if numeroDoEmpregadoNovo is None or numeroDoEmpregadoVelho is None:
+        print('Nenhum trabalhador foi registrado.')
+    else:
+        print(f'\nO trabalhador mais novo na empresa possui registro: {numeroDoEmpregadoNovo} e está aqui há {anosTrabalhadorNovo} ano(s)')
+        print(f'O trabalhador mais antigo na empresa possui registro: {numeroDoEmpregadoVelho} e está aqui há  {anosTrabalhadorVelho} ano(s)')
+
+   
+    ```
+
+67. A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:
+   a)	Média do salário da população;
+   b)	Média do número de filhos;
+   c)	Maior salário;
+   d)	Percentual de pessoas com salário até R$250,00.
+   Desenvolver um programa para calcular e escrever o que foi pedido nos itens a, b, c e d. O final da leitura de dados se dará com a entrada de um salário negativo.
+   ```python
+
+   salario250 = totalFilhos = totalSalario = 0
+   contador = 0
+   maiorSal = float('-inf')
+
+   continuar = "S"
+
+   while continuar == "S":
+       Salario = int(input('Digite o salario deste habitante (ou um valor negativo para encerrar): '))
+
+       if Salario < 0:
+           continuar = "N"
+           continue
+
+       totalSalario += Salario
+       contador += 1
+
+       if Salario > maiorSal:
+           maiorSal = Salario
+
+       if Salario <= 250:
+           salario250 += 1
+
+       Nfilhos = int(input('Digite a quantia de filhos deste habitante: '))
+       if Nfilhos > 0:
+           totalFilhos += Nfilhos
+
+       continuar = input('Deseja continuar? S - Sim / N - Não: ').strip().upper()
+
+   if contador > 0:
+       mediaSalario = totalSalario / contador
+       mediaFilhos = totalFilhos / contador
+       percentualSalario250 = (salario250 / contador) * 100
+
+       print(f'\nA) A média salarial da população foi de: {mediaSalario}')
+       print(f'B) A média do número de filhos da população foi de: {mediaFilhos}')
+       print(f'C) O maior salário registrado foi de: {maiorSal}')
+       print(f'D) O percentual de pessoas com salário de até R$250 foi de: {percentualSalario250}')
+   else:
+       print("Nenhum dado válido foi registrado.")
+
+
+
+   ```
+
+
+68. Faça um programa que leia uma quantidade não determinada de números positivos. Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos. O número que encerrará a leitura será zero.
+    ```python
+
+    ```
 
     
