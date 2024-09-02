@@ -872,5 +872,155 @@ Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapass
 
 52. Sendo H = 1 + 1/2 + 1/3 + 1/4 + ... + 1/N. Faça um programa para gerar e mostrar o número H. O número N será fornecido como entrada.
     ```python
+    N = int(input('Digite o valor de N: '))
+    H = 0
+    for i in range(1, N + 1):
+        H += 1 / i
+        print(f'1/{i} = {1 / i}')
+    
+    print(f'H = {H}')
+
 
     ```
+
+53. Faça um programa para: 
+a) Ler um valor x qualquer
+b) Calcular Y = (x+1)+(x+2)+(x+3)+(x+4)+(x+5)+…(x+100).
+    ```python
+    X: int = int(input('digite um valor para X: '))
+    resultado = 0
+    variavel = 0
+
+    for i in range(1,101,1):
+      variavel += 1
+      Y = (X + variavel)
+      resultado += Y
+  
+    print(f'o resultado de Y é : {resultado}')
+
+    ```
+
+
+54. Fazer um programa que calcule e escreva a soma dos 50 primeiros termos da seguinte série:
+    ```python
+    numerador = 1003
+    denominador = 0
+    resultadoFinal = 0
+
+    for i in range(0,51):
+
+      numerador -= 3
+      denominador += 1
+      soma = numerador / denominador
+      print(f'{numerador} / {denominador}')
+      resultadoFinal += soma
+
+    print(f' a Soma dos 50 primeiros termos é: {resultadoFinal}')
+
+    ```
+
+55. Faça um programa que recebe o número real x como entrada e devolva uma aproximação do arco tangente de x (em radianos) através da série:
+    ```python
+    x: float = float(input('digite o valor de X: '))
+
+    sinal = 1
+    expoente = 1 
+    arctang = 0
+
+    for i in range(50):
+      arctang += sinal * (x**expoente/ expoente)  
+      expoente += 2
+      sinal *= -1
+
+    print(f' o arco tanente de {x}° em radiano é: {arctang}')
+
+    ```
+56.	Faça um programa que mostre os n termos da Série a seguir: 
+
+      S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
+      Imprima no final a soma da série.
+      ```python
+      n: int = int(input('digite o valor de n(quantidade de termos): '))
+      numerador = 1
+      denominador = 1
+      soma = 0
+
+      for i in range(n):
+        termo = (numerador / denominador)
+        soma += termo
+        print(f'{numerador} / {denominador} = {termo}')
+        numerador += 1
+        denominador += 2
+  
+      print(f'o resultado da soma é: {soma}')
+
+
+      ```
+
+57. Cada espectador de um cinema respondeu a um questionário no qual constava sua idade e a sua opinião em relação ao filme: ótimo - 3, bom - 2, regular - 1. Faça um programa que receba a idade e a opinião de 15 espectadores, calcule e imprima:
+a)	A média das idades das pessoas que responderam ótimo;
+b)	A quantidade de pessoas que responderam regular;
+c)	A porcentagem de pessoas que responderam bom entre todos os espectadores analisados.
+    ```python
+    otimo = 0
+    bom = 0
+    regular = 0
+    idade_total = 0
+    rep = 0
+
+    for i in range(15):
+      idade:int = int(input('digite a sua idade: '))
+      nota: int = int(input('''digite a sua opinião ao filme:
+    otimo - (3)
+    bom - (2)
+    regular - (1)   :  '''))
+  
+      rep += 1
+      if nota == 1:
+        regular += 1
+      else:
+        if nota == 2:
+          bom += 1 
+      
+        else:
+          if nota == 3:
+            otimo += 1
+            idade_total += idade
+          else:
+            print('valor inválido')
+
+    if otimo > 0:
+      media_idade = (idade_total / otimo)
+    else:
+      media_idade = 0
+
+    porcentagem_bom =(bom / 15) * 100 
+  
+
+    if rep == 15:
+        print(f'a media das idades das pessoas que respoderam (Òtimo)  no questionário é: {media_idade} ')
+        print(f'a quantidade de pessoas que respoderam (Regular) no questionário é: {regular} ')
+        print(f'a porcentagem de pessoas que respoderam (Bom) entre todos os espectadores analisados é: {porcentagem_bom:.2f}% ')
+
+    ```
+
+58. Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
+    ```python
+    n1: int = int(input('digite um valor: '))
+    n2: int = int(input('digite outro valor: '))
+    if n1 != n2:
+      if n1 > n2:
+        for i in range(n2 + 1 , n1):
+          print(i)
+
+      else:
+         if n1 < n2:
+          for i in range (n1 + 1 , n2):
+            print(i)
+        
+    else:
+      print(f'não existe intervalo entre os numeros {n1} e {n2}!')
+
+    
+    ```
+ 
