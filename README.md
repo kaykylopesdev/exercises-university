@@ -565,6 +565,39 @@ A mensagem "Aprovado com Distinção", se a média for igual a 10.
 Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1; 
 Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1. 
     ```python
+    saque = int(input('Valor de saque: '))
+
+    notaUm = notaCinco = notaDez = notaCinquenta = notaCem = 0
+
+    if saque < 10 or saque > 600:
+      print('Valor Inválido')
+    else:
+      if saque >= 100:
+        notaCem = saque // 100
+        saque = saque % 100
+      if saque >= 50:
+        notaCinquenta = saque // 50
+        saque = saque % 50
+      if saque >= 10:
+        notaDez = saque // 10
+        saque = saque % 10
+      if saque >= 5:
+        notaCinco = saque // 5
+        saque = saque % 5
+      if saque >= 1:
+        notaUm = saque // 1
+        saque = saque % 1
+
+     if notaCem > 0:
+       print(notaCem, 'Nota(s) de R$100')
+     if notaCinquenta > 0:
+       print(notaCinquenta, 'Nota(s) de R$50')
+     if notaDez > 0:
+       print(notaDez, 'Nota(s) de R$10')
+    if notaCinco > 0:
+      print(notaCinco, 'Nota(s) de R$5')
+    if notaUm > 0:
+      print(notaUm, 'Nota(s) de R$1')
 
     ```
     
@@ -679,7 +712,37 @@ inteiro ou decimal.
 "Devia para a vítima?" 
 "Já trabalhou com a vítima?" O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
     ```python
-    
+    respostas = 0
+
+    pergunta1 = input('Telefonou para a vitima? Digite sim ou não')
+    if pergunta1 == 'sim':
+      respostas += 1
+    pergunta2 = input('Esteve no local do crime? Digite sim ou não')
+    if pergunta2 == 'sim':
+      respostas += 1
+    pergunta3 = input('Mora perto da vitima? Digite sim ou não')
+    if pergunta3 == 'sim':
+      respostas += 1
+    pergunta4 = input('Devia para a vitima? Digite sim ou não')
+    if pergunta4 == 'sim':
+      respostas += 1
+    pergunta5 = input('Ja trabalhou com a vitima? Digite sim ou não')
+    if pergunta5 == 'sim':
+      respostas += 1
+
+    if respostas != 'sim' or respostas != 'não':
+      print('invalido')
+    else:
+      if respostas == 2:
+        print('Suspeita')
+      else:
+        if respostas >=3 and respostas <=4:
+          print('Cúmplice')
+        else:
+          if respostas == 5:
+            print('Assassino')
+          else:
+            print('Inocente')
     ```
 
 43. Um posto está vendendo combustíveis com a seguinte tabela de descontos: 
@@ -1100,6 +1163,24 @@ c)	A porcentagem de pessoas que responderam bom entre todos os espectadores anal
 
 62. A série de FETUCCINE é gerada da seguinte forma: os dois primeiros termos são fornecidos pelo usuário; a partir daí, os termos são gerados com a soma ou subtração dos dois termos anteriores, ou seja:
     ```python
+    i = 2
+    qntd = 0
+    while qntd < 3:
+      qntd = int(input("Digite a quantidade de números da série (serão necessários pelo menos três termos): "))
+
+    primeiro_termo = int(input("Insira o primeiro termo da série: "))
+    segundo_termo = int(input("Insira o segundo termo da série: "))
+    print(f"1° - {primeiro_termo}")
+    print(f"2° - {segundo_termo}")
+    while i < qntd:
+      if i % 2 == 0:
+        novo_termo = segundo_termo + primeiro_termo
+     else:
+        novo_termo = segundo_termo - primeiro_termo
+     print(f"{i + 1}° - {novo_termo}")
+     primeiro_termo = segundo_termo
+     segundo_termo = novo_termo
+     i += 1
 
     ```
 
@@ -1282,8 +1363,179 @@ Quantidade de Parcelas  % de Juros sobre o valor inicial da dívida
 
 
 68. Faça um programa que leia uma quantidade não determinada de números positivos. Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos. O número que encerrará a leitura será zero.
+       ```python
+	valor = valorPedido = valorTotal = 0
+
+	item100 = item101 = item102 = item103 = item104 = item105 = item106 = 0
+
+	valItem100 = valItem101 = valItem102 = valItem103 = valItem104 = valItem105 = 0
+
+	print("Especificação 	    Código 	 	 Preço")
+	print("Cachorro Quente 	  100     	R$ 1,20")
+	print("Bauru Simples         101     	R$ 1,30")
+	print("Bauru com ovo         102     	R$ 1,50")
+	print("Hambúrguer            103     	R$ 1,20")
+	print("Cheeseburguer         104     	R$ 1,30")
+	print("Refrigerante          105     	R$ 1,00")
+
+	comidaCod = str(input("\nInforme o codigo do lanche desejado: "))
+	if comidaCod == "100" or comidaCod == "101" or comidaCod == "102" or comidaCod == "103" or comidaCod == "104" or comidaCod == "105":
+    	quantia = int(input("Informe a quantia: "))
+
+	if comidaCod == "100":
+    	valor = 1.2
+    	valorPedido = valor * quantia
+    	item100 += quantia
+    	valItem100 += valor * quantia
+	elif comidaCod == "101":
+    	valor = 1.3
+    	valorPedido = valor * quantia
+    	item101 += quantia
+    	valItem101 += valor * quantia
+	elif comidaCod == "102":
+    	valor = 1.5
+    	valorPedido = valor * quantia
+    	item102 += quantia
+    	valItem102 += valor * quantia
+	elif comidaCod == "103":
+    	valor = 1.2
+    	valorPedido = valor * quantia
+    	item103 += quantia
+    	valItem103 += valor * quantia
+	elif comidaCod == "104":
+    	valor = 1.3
+    	valorPedido = valor * quantia
+    	item104 += quantia
+    	valItem104 += valor * quantia
+	elif comidaCod == "105":
+    	valor = 1.3
+    	valorPedido = valor * quantia
+    	item105 += quantia
+    	valItem105 += valor * quantia
+	elif comidaCod != "100" or comidaCod != "101" or comidaCod != "102" or comidaCod != "103" or comidaCod != "104" or comidaCod != "105":
+    	print("Voce digitou um codigo invalido.")
+
+	valorTotal += valorPedido
+
+	condicional = str(input("\nDeseja continuar comprando? S - Sim / N - Não  ")).upper()
+
+	while condicional not in "N":
+    	comidaCod = str(input("\nInforme o codigo do lanche desejado: "))
+    	if comidaCod == "100" or comidaCod == "101" or comidaCod == "102" or comidaCod == "103" or comidaCod == "104" or comidaCod == "105":
+        	quantia = int(input("Informe a quantia: "))
+
+    	if comidaCod == "100":
+        	valor = 1.2
+        	valorPedido = valor * quantia
+        	item100 += quantia
+        	valItem100 += valor * quantia
+    	elif comidaCod == "101":
+        	valor = 1.3
+        	valorPedido = valor * quantia
+        	item101 += quantia
+        	valItem101 += valor * quantia
+    	elif comidaCod == "102":
+        	valor = 1.5
+        	valorPedido = valor * quantia
+        	item102 += quantia
+        	valItem102 += valor * quantia
+    	elif comidaCod == "103":
+        	valor = 1.2
+        	valorPedido = valor * quantia
+        	item103 += quantia
+        	valItem103 += valor * quantia
+    	elif comidaCod == "104":
+        	valor = 1.3
+        	valorPedido = valor * quantia
+        	item104 += quantia
+        	valItem104 += valor * quantia
+    	elif comidaCod == "105":
+        	valor = 1.3
+        	valorPedido = valor * quantia
+        	item105 += quantia
+        	valItem105 += valor * quantia
+    	elif comidaCod != "100" or comidaCod != "101" or comidaCod != "102" or comidaCod != "103" or comidaCod != "104" or comidaCod != "105":
+        	print("Voce digitou um codigo invalido.")
+
+    	valorTotal += valorPedido
+
+    	condicional = str(input("\nDeseja continuar comprando? S - Sim / N - Não  ")).upper()
+
+	if condicional == "N":
+    	print("\n(100) Voce pediu um total de:", item100, ",Somando: ", valItem100)
+    	print("(101) Voce pediu um total de:", item101, ",Somando: ", valItem101)
+    	print("(102) Voce pediu um total de:", item102, ",Somando: ", valItem102)
+    	print("(103) Voce pediu um total de:", item103, ",Somando: ", valItem103)
+    	print("(104) Voce pediu um total de:", item104, ",Somando: ", valItem104)
+    	print("(105) Voce pediu um total de:", item105, ",Somando: ", valItem105)
+    	print("\nO total da sua compra foi de: ", valorTotal, "Reais")
+
+      ```
+
+70. Você foi contratado para escrever um algoritmo que calcule quantos pontos fez um time num campeonato de futebol. Para os que não conhecem futebol uma vitória vale três pontos, um empate vale 1 ponto e a derrota não vale ponto. A entrada será composta por pares de números indicando o resultado de cada jogo. O primeiro número sempre corresponde ao total de gols que o time fez no jogo. A leitura dos dados será finalizada quando for fornecido um número de gols negativo.
+	```python
+ 	pontos = 0
+
+	print("AVISO: Para interromper o programa, digite uma quantidade negativa de gols.")
+
+	continuar = True
+
+	while continuar:
+ 	   golsFeitos = int(input("Informe quantos gols o time fez: "))
+   	 golsSofridos = int(input("Informe quantos gols o time sofreu: "))
+
+   	 if golsFeitos < 0 or golsSofridos < 0:
+    	    continuar = False
+   	 else:
+       	 if golsFeitos > golsSofridos:
+       	     pontos += 3
+       	 elif golsFeitos == golsSofridos:
+          	  pontos += 1
+
+	print("\nO time fez um total de:", pontos, "pontos!")
+ 
+ 
+ 	```
+
+71. Faça um programa que receba um número e verifique se ele é ou não triangular.  OBS: um número é triangular quando é resultado do produto de 3 números consecutivos. Exemplo: o número 24 é triangular, pois, 24 = 2 * 3 * 4.
+	```python
+
+	print("Verifique se um numero é triangular")
+
+	numero = int(input("Digite o valor do numero: "))
+
+	i = 1
+
+	while i*(i+1)*(i+2) < numero:
+    	i = i + 1
+
+	if i*(i+1)*(i+2) == numero:
+    	print(numero, "é o produto", i, "", i+1, "", i+2)
+
+	else:
+    	print("Não é triangular:", numero)
+ 
+ 
+ 	```
+72. Faça um programa para validar o login e a senha de um usuário. Caso o usuário informe algum valor inválido informar o erro e pedir novamente os dados. A leitura dos dados deve ser encerrada quando o usuário digitar 3 vezes um valor inválido (login ou senha). Considere o login válido como "kezia" e a senha como "123".
     ```python
-
-    ```
-
     
+
+    contador = validacao = 0
+
+    while contador < 3:
+        login = str(input("Informe o seu login: "))
+        senha = str(input("Informe sua senha: "))
+        if login != "kezia" or senha != "123":
+            contador += 1
+         print("\nsenha ou login invalidos, tente novamente")
+            validacao += 0
+
+        else:
+            print("\nBem vinda, Kezia!")
+            contador += 3
+            validacao += 1
+
+    if contador >= 3 and validacao == 0:
+        print("\nTente novamente mais tarde.")
+    ```
