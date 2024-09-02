@@ -1482,14 +1482,14 @@ Quantidade de Parcelas  % de Juros sobre o valor inicial da dívida
 
 	while continuar:
  	   golsFeitos = int(input("Informe quantos gols o time fez: "))
-   	 golsSofridos = int(input("Informe quantos gols o time sofreu: "))
+           golsSofridos = int(input("Informe quantos gols o time sofreu: "))
 
    	 if golsFeitos < 0 or golsSofridos < 0:
     	    continuar = False
    	 else:
-       	 if golsFeitos > golsSofridos:
-       	     pontos += 3
-       	 elif golsFeitos == golsSofridos:
+       	     if golsFeitos > golsSofridos:
+       	         pontos += 3
+       	     elif golsFeitos == golsSofridos:
           	  pontos += 1
 
 	print("\nO time fez um total de:", pontos, "pontos!")
