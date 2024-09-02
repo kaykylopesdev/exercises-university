@@ -1008,19 +1008,101 @@ c)	A porcentagem de pessoas que responderam bom entre todos os espectadores anal
     ```python
     n1: int = int(input('digite um valor: '))
     n2: int = int(input('digite outro valor: '))
-    if n1 != n2:
-      if n1 > n2:
-        for i in range(n2 + 1 , n1):
-          print(i)
+    if (n1 - 1) == n2 or (n2 - 1) == n1:
+      print(f'não existe intervalo inteiro entre os numeros {n1} e {n2} !')
+    else:
+      if n1 != n2:
+        if n1 > n2:
+          for i in range(n2 + 1 , n1):
+            print(i)
+
+        else:
+          if n1 < n2:
+           for i in range (n1 + 1 , n2):
+             print(i)
 
       else:
-         if n1 < n2:
-          for i in range (n1 + 1 , n2):
-            print(i)
-        
-    else:
-      print(f'não existe intervalo entre os numeros {n1} e {n2}!')
+       print(f'não existe intervalo inteiro entre os numeros {n1} e {n2} !')
+
 
     
     ```
+
+ 59. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo: 
+
+
+Tabuada de 5:
+5 X 1 = 5
+5 X 2 = 10
+...
+5 X 10 = 50
+
+   ```python
+     x = int(input('digite o numero o qual voce deseja ver a tabuada: '))
+     while x < 0:
+         print('valor inválido, por favor digite outro valor para X')
  
+         x = int(input('digite o numero o qual voce deseja ver a tabuada: '))
+ 
+     for y in range (1,11):
+         tabuada = y * x
+         print( x, "x", y, "=", tabuada)
+
+ 
+ ```
+
+60. Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.
+    ```python
+    quant = 0
+    numero:int  = int(input('Digite um número: '))
+
+    while numero <= 0:
+      print('Valor inválido! Tente novamente.')
+
+      numero = int(input('Digite um número: '))
+    print(f'os numeros divisores foram : ')
+    for i in range(1,numero + 1):
+      if numero % i == 0:
+        print(i, end=(' '))
+        quant += 1
+    print(f'\nO número {numero} foi divisível {quant} vezes.')
+    if quant == 2 :
+      print('O número é primo.')
+    else:
+      print('O número não é primo.')
+
+    ```
+
+61. Faça um programa que peça para n pessoas a sua idade, ao final o programa devera verificar se a média de idade da turma varia entre 0 e 25, 26 e 60 e maior que 60; e então, dizer se a turma é jovem, adulta ou idosa, conforme a média calculada.
+    ```python
+    nPessoas = int(input('Digite a quantidade de pessoas: '))
+    idadeTotal = 0
+
+    for i in range(nPessoas):
+        idade = int(input(f'Digite a idade da pessoa { i + 1 } : '))
+
+        while idade < 0:
+            print("Valor inválido. Idade não pode ser negativa.")
+            idade = int(input('Digite outra idade válida: '))
+    
+        idadeTotal += idade
+    
+    media = idadeTotal / nPessoas
+
+    if media <= 25:
+        print('A turma é jovem!')
+    else:
+       if media <= 60:
+           print('A turma é adulta!')
+       else:
+          if media > 60:
+           print('A turma é idosa!')
+
+   
+    ```
+
+62. A série de FETUCCINE é gerada da seguinte forma: os dois primeiros termos são fornecidos pelo usuário; a partir daí, os termos são gerados com a soma ou subtração dos dois termos anteriores, ou seja:
+
+    
+
+    
